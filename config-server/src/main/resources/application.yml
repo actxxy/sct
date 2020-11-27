@@ -1,0 +1,17 @@
+server:
+  port: 12000
+logging:
+  level:
+    com.xxy: debug
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/actxxy/sctconfig.git
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka

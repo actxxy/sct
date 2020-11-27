@@ -1,0 +1,20 @@
+# 该文件不再启用，配置从git配置中心中启用
+server:
+  port: 9091
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.23.171:3306/xxy
+    username: root
+    password: 123456
+  application:
+    name: user-service
+mybatis:
+  type-aliases-package: com.xxy.user.com.xxy.consumer.pojo
+eureka:
+  instance:
+    lease-expiration-duration-in-seconds: 90 # 服务失效时间
+    lease-renewal-interval-in-seconds: 30 # 服务续约的间隔默认30S
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
